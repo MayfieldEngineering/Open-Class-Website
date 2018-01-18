@@ -16,7 +16,7 @@ html {
     font-family: "Lucida Sans", sans-serif;
 }
 .header {
-    background-color: green;
+    background-color: #06a320;
     color: #ffffff;
     padding: 15px;
 }
@@ -28,59 +28,46 @@ html {
 .menu li {
     padding: 8px;
     margin-bottom: 7px;
-    background-color: black;
+    background-color: #2b2b2b;
     color: #ffffff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .menu li:hover {
-    background-color: rgb(40, 40, 40);
+    background-color: #000000;
 }
-.menu a:link {
-    text-decoration: none;
+a.nounderline {
+    text-decoration: none; 
 }
 .aside {
-    background-color: black;
-    padding: 15px;
+    align:right;
+    background-color: #2b2b2b;
+    padding: 10px;
     color: #ffffff;
-    text-align: center;
+    list-style: none;
     font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 10px 1px 3px rgba(0,0,0,0.12), 10 1px 2px rgba(0,0,0,0.24);
 }
 .aside a{
     color: #ffffff;
 }
 .footer {
-    background-color: gray;
+    background-color: #000000;
     color: #ffffff;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     padding: 15px;
 }
 .footer a{
     color: #ffffff;
 }
-.floating-block {
-    display: inline-block;
-}
-.codebox {
-    /* Below are styles for the codebox (not the code itself) */
-    border:1px solid black;
-    background-color:#EEEEFF;
-    width:95%;
-    overflow:auto;    
-    padding:10px;
-}
-.codebox code {
-    /* Styles in here affect the text of the codebox */
-    font-size:0.9em;
-    /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
-}
 /* For mobile phones: */
+/* All modern websites are built with their mobile phone design first*/
 [class*="col-"] {
     width: 100%;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) { /*use these if screen is 600+px wide*/
     /* For tablets: */
+    /* These classes will determine how the page will look when it is resized to the medium sized format*/
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}
     .col-m-3 {width: 25%;}
@@ -93,9 +80,15 @@ html {
     .col-m-10 {width: 83.33%;}
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
+    .largelist {
+        -webkit-columns: 150px 2; /* Chrome, Safari, Opera */
+        -moz-columns: 150px 2; /* Firefox */
+        columns: 150px 2;
+    }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) { /*use these if screen is 768+px wide*/
     /* For desktop: */
+    /* These classes will determine how the page will look when it is resized to the largest format*/
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -108,4 +101,9 @@ html {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+    .largelist {
+        -webkit-columns: 125px 3; /* Chrome, Safari, Opera */
+        -moz-columns: 125px 3; /* Firefox */
+        columns: 125px 3;  
+    }
 }
